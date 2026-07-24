@@ -29,36 +29,16 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{graphicx}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -81,7 +61,7 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -92,24 +72,11 @@
   }
 }
 
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -137,121 +104,83 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    {\Huge \scshape Tanmoy Saha} \\ \vspace{2pt}
-    \small \raisebox{-0.1\height}\faPhone\ +91-8637097554 ~ \href{mailto:tanmoyheritage23@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{tanmoyheritage23@gmail.com}} ~ 
-    \href{https://www.linkedin.com/in/tanmoysahaofficial/}{\raisebox{-0.2\height}\faLinkedin\ \underline{tanmoysahaofficial}} 
-    ~
-    \href{https://github.com/tanmoyheritage23}{\raisebox{-0.2\height}\faGithub\ \underline{tanmoyheritage23}} ~ 
-\includegraphics[width=0.4cm]{leetcode.png}\href{https://leetcode.com/Dark_kryptonian23/}{Dark-kryptonian}
+    {\Huge \scshape Tanmoy Saha} \\ \vspace{4pt}
+    \small \faPhone\ +91-8637097554 ~
+    \href{mailto:tanmoyheritage23@gmail.com}{\faEnvelope\ \underline{tanmoyheritage23@gmail.com}} ~
+    \href{https://www.linkedin.com/in/tanmoysahaofficial/}{\faLinkedin\ \underline{tanmoysahaofficial}} ~
+    \href{https://github.com/tanmoyheritage23}{\faGithub\ \underline{tanmoyheritage23}} ~
+    \href{https://leetcode.com/Dark_kryptonian23/}{\faCode\ \underline{Dark-kryptonian}}
 \end{center}
 \vspace{-10pt}
 
-\section{PROFESSIONAL SUMMARY}
-  \resumeSubHeadingListStart
-
-  {Software Engineer with 4 years of experience designing and scaling high-throughput backend systems for billing platforms at Netcracker and Cognizant. Delivered an 88\% reduction in batch processing time and a 90\% efficiency gain across 100M+ transaction pipelines through system redesign, data reconciliation, and service optimization.}
-    \resumeSubHeadingListEnd
-  \vspace{-15pt}
+\section{Summary}
+  \small{Software Engineer with 3+ years of experience architecting and scaling distributed, high-throughput backend systems for fintech and billing platforms at Netcracker and Cognizant. Delivered an 88\% reduction in batch processing time and a 90\% efficiency gain across 100M+ transaction pipelines by leading microservices redesign, data reconciliation, and end-to-end service optimization.}
+\vspace{-6pt}
 
 
 %-----------EXPERIENCE-----------
-\section{EXPERIENCE}
-  \resumeSubHeadingListStart
-\resumeSubheading
-  {Netcracker Technology}{June 2025 -- Present}
-  {Software Engineer}{Bengaluru, Karnataka}
-
-% \vspace{5pt}
-% \textbf{Uplifting P\&L Workflow}{~$|$ }\textit{Java, Spring Boot, AWS Glue}
-\resumeItemListStart
-\vspace{-5pt}
-    \resumeItem{Reduced overnight batch runtime by \textbf{88\% (from 9 hours to 105 minutes)} by streamlining onboarding and eliminating \textbf{4 million lines of code}, significantly boosting system efficiency.}
-    \resumeItem {\textbf{Led development and integration of a Cashflow component}, improving pipeline accuracy by \textbf{35\%} through data hop minimization and authoritative source management.}
-    \resumeItem{\textbf{Developed a unified derivatives calculation logic} using \textbf{Java and Spring Boot}, increasing computational efficiency by \textbf{40\%}.}
-    \resumeItem{\textbf{Built a high-performance data reconciliation module} leveraging advanced algorithms, reducing data processing time by \textbf{63\%} and enhancing reconciliation accuracy.}
-    \resumeItem{\textbf{Integrated a new product line into the workflow UI}, enabling real-time P\&L status views and direct adjustments, improving user efficiency by \textbf{20\%}.}
-
-    
-\resumeItemListEnd
-\vspace{5pt}
-\resumeSubheading
-  {Cognizant}{February 2023 -- June 2025}
-  {Software Engineer}{Bengaluru, Karnataka}
-  
-% \vspace{5pt}
-% \textbf{RRR \& Corporate Loans Workflow}{~$|$ }\textit{Java, Spring Security, SQL}
-\resumeItemListStart
-\vspace{-5pt}
-  \resumeItem{Optimized Idrive to Lake data transfers, reducing processing time from \textbf{15 hours to 87 minutes} for over \textbf{100 million transactions}, achieving a \textbf{90\%} improvement in operational efficiency.}
-  \resumeItem{Designed and deployed a daily \textbf{Risk-Weighted Asset calculation} workflow, enabling real-time financial insights and resulting in up to \textbf{10x faster reporting}.}
-  \resumeItem{Established infrastructure to guarantee \textbf{100\% data accuracy and integrity} for Loans Data, managing exceptions effectively.}
-  \resumeItem{Automated \textbf{data retrieval, SCRP stamping, and database storage}, reducing manual effort by \textbf{3–4 hours daily} and minimizing human errors.}
-\resumeItemListEnd
-\vspace{5pt}
-
-  \resumeSubHeadingListEnd
-  \textcolor{white}{springboot, spring, Hibernate, agile, scrum, front end, test-driven development, user interface, design patterns, cloud infrastructure, CI/CD, DevOps, version control, angular, python, GraphQL, Golang, test driven development, web services, Mocha, state management, webpack, UI/UX, unit test, cloud technologies, e-commerce, C, Prometheus, HTML, CSS.}
-\vspace{-65pt}
-
-
-          
-          \textcolor{white}{Java, AWS, Docker, Kubernetes, Microservices, Kafka, Jest, Maven, System design, Operating system, Azure, continuous integration, JSON, Jira, operating systems, computer networks, oracle, UX/UI, Linux, Scripting, SOAP, MVC, DOM, AJAX, Serverless, Vue, UX design, development life cycle, distributed system, jQuery, Ruby, XML, SaaS, Angular, React, TypeScript, Javascript.} 
-          \vspace{-60pt}
-      %-----------PROJECTS-----------
-
-%\vspace{-15pt}
-
-%------RELEVANT COURSEWORK-------
-\section{SKILLS}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: C++, Java} \\
-     \textbf{Developer Tools}{: VS Code, Intellij IDEA, Postman, Git, GitLab, DBeaver, Swagger, OpenAPI, Jira, Claude Code, GitHub Copilot, Codex } \\
-     \textbf{Technologies/Frameworks}{: Spring, Spring Boot, Spring Security, Microservices, Jenkins, PostgreSQL, REST API, Maven, Payment Gateway, Spring Data JPA, Hibernate, GCP, JUnit, Mockito, Kubernetes, Docker, Zipkin, Elasticsearch} \\
-     \hspace{-4pt}\textbf{ Core Subjects}{: Data Structures \& Algorithms, Object Oriented Programming, Database Management System} 
-    }}
- \end{itemize}
- \vspace{-15pt}
-
- \section{PROJECTS}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{StoreIt}~\href{https://store-it-alpha-lemon.vercel.app/}\faLink~$|$ \emph{React, Spring Boot, Appwrite, ShadCN} }{June 2024 - December 2024}
-          \resumeItemListStart
-            \resumeItem{Integrated \textbf{Appwrite APIs} to streamline file management functionalities, including uploads, downloads, sharing, and deletion, leading to \textbf{20+ new users}.}  
-            \resumeItem{Implemented \textbf{data organization and accessibility}, leading to increased \textbf{user efficiency}, through the development of a dashboard displaying \textbf{storage statistics, recent uploads, and categorized file summaries}.}   
-            \resumeItem{Enabled seamless collaboration by allowing users to \textbf{share uploaded files} effortlessly, ensuring quick and secure access to important content.}  
-          \resumeItemListEnd   
-          
-    \resumeSubHeadingListEnd
-
-
-%-----------INVOLVEMENT---------------
-
-     \section{ACHIEVEMENTS}
-\resumeItemListStart
-    \resumeItem{Solved \textbf{700+ problems} on coding platforms, LeetCode rating \textbf{1773(max)}, ranked in the \textbf{Top 9.14\%} globally.}
-    \vspace{-5pt}
-    \resumeItem{Achieved a \textbf{Top 3\%} rank (\textbf{1036/35721}) in LeetCode Weekly Contests, recognized with \textbf{5 badges} for consistency and performance.}
-    \vspace{-5pt}
-    \resumeItem{Awarded \textbf{Project Pivot Program badge 2×} under Cognizant's \textbf{Bluebolt initiative} for project excellence.}
-        
-  \resumeItemListEnd
-            \vspace{-5pt}
-   
-    %-----------EDUCATION-----------
-\section{EDUCATION}
+\section{Work Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Heritage Institute Of Technology}{August 2018 - July 2022}
-      {B.Tech in Applied Electronics and Instrumentation~$|$ \textbf{CGPA-8.2}}{Kolkata, West Bengal}
+      {Netcracker Technology}{Jun 2025 -- Present}
+      {Software Engineer}{Bengaluru, Karnataka}
+    \resumeItemListStart
+      \resumeItem{Reduced overnight batch runtime by \textbf{88\% (from 9 hours to 105 minutes)} by streamlining onboarding and removing \textbf{4 million lines of redundant legacy code}.}
+      \resumeItem{\textbf{Led development and integration of a Cashflow component}, improving pipeline accuracy by \textbf{35\%} by reducing intermediate data hops and consolidating data from a single authoritative source.}
+      \resumeItem{\textbf{Developed a unified derivatives calculation logic} using \textbf{Java and Spring Boot}, increasing computational efficiency by \textbf{40\%}.}
+      \resumeItem{\textbf{Built a high-performance data reconciliation module} leveraging advanced algorithms, reducing data processing time by \textbf{63\%} and enhancing reconciliation accuracy.}
+      \resumeItem{\textbf{Integrated a new product line into the workflow UI}, enabling real-time P\&L status views and direct adjustments, improving user efficiency by \textbf{20\%}.}
+    \resumeItemListEnd
+
+    \vspace{4pt}
+    \resumeSubheading
+      {Cognizant}{Feb 2023 -- Jun 2025}
+      {Software Engineer}{Bengaluru, Karnataka}
+    \resumeItemListStart
+      \resumeItem{Optimized Idrive to Lake data transfers, reducing processing time from \textbf{15 hours to 87 minutes} for over \textbf{100 million transactions}, achieving a \textbf{90\%} improvement in operational efficiency.}
+      \resumeItem{Designed and deployed a daily \textbf{Risk-Weighted Asset calculation} workflow, enabling real-time financial insights and resulting in up to \textbf{10x faster reporting}.}
+      \resumeItem{Built infrastructure to enforce \textbf{100\% data accuracy and integrity} for Loans data, with structured exception handling to prevent data loss.}
+      \resumeItem{Automated \textbf{data retrieval, Standard Credit Risk Parameter (SCRP) stamping, and database storage}, cutting manual effort by \textbf{3--4 hours daily} and eliminating human errors.}
+      \resumeItem{Awarded \textbf{Project Pivot Program badge 2x} under the \textbf{Bluebolt initiative} for project excellence.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{StoreIt} \href{https://store-it-alpha-lemon.vercel.app/}{\faExternalLink*} ~$|$ \emph{React, Spring Boot, Appwrite, ShadCN}}{Jun 2024 -- Dec 2024}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack cloud storage platform using \textbf{React and Spring Boot}, integrating \textbf{Appwrite APIs} for file uploads, downloads, sharing, and deletion with \textbf{role-based access controls}.}
+        \resumeItem{Designed an analytics dashboard surfacing \textbf{real-time storage statistics, recent uploads, and categorized file summaries}, reducing time spent locating files by \textbf{40\%}.}
+        \resumeItem{Deployed to production on Vercel, supporting \textbf{20+ active users} with secure cross-user file sharing and persistent cloud storage.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+
+%------SKILLS-------
+\section{Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Programming Languages}{: Java, C++, SQL} \\
+      \textbf{Developer Tools}{: VS Code, IntelliJ IDEA, Postman, Git, GitLab, DBeaver, Swagger, OpenAPI, Jira, Claude Code, GitHub Copilot, Codex} \\
+      \textbf{Technologies/Frameworks}{: Spring, Spring Boot, Spring Security, Microservices, Distributed Systems, System Design, Jenkins, PostgreSQL, REST API, Maven, Spring Data JPA, Hibernate, AWS, Apache Kafka, Redis, GCP, JUnit, Mockito, Kubernetes, Docker, Zipkin, Elasticsearch} \\
+      \textbf{Competitive Programming}{: LeetCode rating 1773 (max), Top 9.14\% globally, Top 3\% in Weekly Contests (rank 1036/35721), 5 consistency badges, 700+ problems solved}
+    }}
+  \end{itemize}
+\vspace{-10pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Heritage Institute Of Technology}{Aug 2018 -- Jul 2022}
+      {B.Tech in Applied Electronics and Instrumentation ~$|$ \textbf{CGPA: 8.2}}{Kolkata, West Bengal}
   \resumeSubHeadingListEnd
 
 
